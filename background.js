@@ -8,7 +8,7 @@ async function getDesignFeedback(pageData) {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "Authorization": `Bearer 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`
+      "Authorization": `Bearer `
     },
     body: JSON.stringify({
       model: "gpt-4",
