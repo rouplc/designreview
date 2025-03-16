@@ -21,12 +21,6 @@
   <body>
     <h2>Design Feedback</h2>
     <div id="feedback"></div>
-    <script>
-      chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-        if (request.action === "displayFeedback") {
-          document.getElementById("feedback").innerText = request.feedback;
-        }
-      });
-    </script>
+    <script src="popup.js"></script>
   </body>
 </html>
