@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Design Feedback</title>
+    <style>
+      body {
+        width: 400px;
+        padding: 10px;
+      }
+      h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      pre {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Design Feedback</h2>
+    <div id="feedback"></div>
+    <script>
+      chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+        if (request.action === "displayFeedback") {
+          document.getElementById("feedback").innerText = request.feedback;
+        }
+      });
+    </script>
+  </body>
+</html>
